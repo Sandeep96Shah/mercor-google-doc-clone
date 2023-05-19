@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {breakPoints} from '../../constant/breakPoints';
+import { colors } from '../../constant/color';
 
 export const Container = styled.div`
     display: flex;
@@ -28,7 +29,7 @@ export const TitleOptionsContainer = styled.div`
         display: flex;
         align-items: center;
         gap: 10px;
-        color: #1f1f1f;
+        color: ${colors.title};
         height: 20px;
         line-height: 22px;
         font-size: 18px;
@@ -42,7 +43,7 @@ export const TitleOptionsContainer = styled.div`
             cursor: pointer;
         }
         .star:hover {
-            background-color: #dcdada;
+            background-color: ${colors.starHover};
             border-radius: 50%;
         }
     }
@@ -57,15 +58,15 @@ export const TitleOptionsContainer = styled.div`
         line-height: 22px;
         min-width: 1px;
         padding: 1px 6px;
-        color: #1f1f1f;
+        color: ${colors.title};
     }
     .title input:hover {
-        border: 1px solid grey;
+        border: 1px solid ${colors.titleHover};
         border-radius: 4px;
     }
     .options {
         display: flex;
-        color: #202124;
+        color: ${colors.options};
         font-size: 14px;
         letter-spacing: .2px;
         cursor: pointer;
@@ -74,7 +75,7 @@ export const TitleOptionsContainer = styled.div`
             border-radius: 4px;
         }
         p:hover {
-            background-color: #dcdada;
+            background-color: ${colors.optionsHover};
         }
     }
 
@@ -125,7 +126,7 @@ export const ProfileContainer = styled.div`
     }
     .comment:hover,
     .video:hover {
-        background-color: #f0f0f0;
+        background-color: ${colors.videoCommentHover};
     }
 
     .share {
@@ -136,8 +137,8 @@ export const ProfileContainer = styled.div`
         border-radius: 20px;
         padding: 0px 18px;
         cursor: pointer;
-        background-color: #c2e7ff;
-        color: #001d35;
+        background-color: ${colors.shareBG};
+        color: ${colors.share};
         font-size: 14px;
         font-weight: 500;
         .lock {
@@ -145,6 +146,6 @@ export const ProfileContainer = styled.div`
         }
     }
     .share:hover {
-        box-shadow: 0px 0px 2px 1px #dcdada;
+        box-shadow: 0px 0px 2px 1px ${colors.shareHover};
     }
 `;
