@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { breakPoints } from '../../constant/breakPoints';
 
 export const Container = styled.div`
     width: 70px;
@@ -19,5 +20,9 @@ export const Container = styled.div`
     }
     .m-b {
         margin-bottom: 1px solid grey;
+    }
+
+    @media screen and (max-width: ${breakPoints.lm}){
+        width: 60px;
     }
 `;

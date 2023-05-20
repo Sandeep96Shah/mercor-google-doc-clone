@@ -3,6 +3,7 @@ import { TITLE } from '../../action/types';
 import { useSelector, useDispatch } from 'react-redux';
 import { Tooltip } from 'antd';
 import { FcDocument } from 'react-icons/fc';
+import { BsFillPersonPlusFill } from 'react-icons/bs';
 import { AiOutlineStar, AiOutlineVideoCamera } from 'react-icons/ai';
 import { TfiCommentAlt } from 'react-icons/tfi';
 import { IoIosArrowDown } from 'react-icons/io';
@@ -83,7 +84,7 @@ const Header = () => {
                         <IoIosArrowDown className='arrow' />
                     </Tooltip>
                 </div>
-                <div className='share'>
+                <div className='share tabletHide'>
                     <p className='lock'>
                         <Tooltip 
                             placement="bottom" 
@@ -93,6 +94,16 @@ const Header = () => {
                         </Tooltip>
                     </p>
                     <p>Share</p>
+                </div>
+                <div className='share tabletShow'>
+                    <p className='lock'>
+                        <Tooltip 
+                            placement="bottom" 
+                            title={"Private to only me"}
+                            >
+                            <BsFillPersonPlusFill />
+                        </Tooltip>
+                    </p>
                 </div>
                 <div className='profile'>
                     <Tooltip 

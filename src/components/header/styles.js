@@ -79,10 +79,20 @@ export const TitleOptionsContainer = styled.div`
         }
     }
 
+    @media screen and (max-width: ${breakPoints.tablet}){
+        .title input {
+            text-overflow: ellipsis;
+        }
+    }
+
     @media screen and (max-width: ${breakPoints.lm}){
         justify-content: start;
+        min-width: 1px;
         .options {
             display: none;
+        }
+        .title input {
+            max-width: 40px;
         }
     }
 `;
@@ -147,5 +157,30 @@ export const ProfileContainer = styled.div`
     }
     .share:hover {
         box-shadow: 0px 0px 2px 1px ${colors.shareHover};
+    }
+
+    .tabletShow {
+        display: none;
+    }
+
+    @media screen and (max-width: ${breakPoints.tablet}) {
+        gap: 8px;
+        .tabletShow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .tabletHide {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: ${breakPoints.lm}) {
+        width: auto;
+        gap: 4px;
+        .comment,
+        .video {
+            width: auto;
+        }
     }
 `;
