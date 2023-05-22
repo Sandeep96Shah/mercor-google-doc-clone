@@ -1,0 +1,107 @@
+.newStyle {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+} 
+
+.ant-modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.titleContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 25px;
+}
+
+.emailOptions {
+    width: 100%;
+    height: 45px;
+}
+
+.ant-select-selector {
+    height: 100%;
+}
+
+.peopleWithAccessTitle,
+.generalAccessTitle {
+    font-size: 20px;
+}
+
+.options {
+    display: flex;
+    gap: 10px;
+}
+
+.option {
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.self {
+    font-size: 13px;
+}
+
+.content:hover {
+    background-color: #eae7e7;
+}
+
+.inputField {
+    height: 45px;
+    width: 95%;
+}
+.inputField input {
+    height: 100%;
+    width: 100%;
+    padding-left: 15px;
+}
+
+.container .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .leftSection {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.container .profile {
+    height: 100%;
+    width: 50px;
+}
+
+.container .profile img {
+    height: 100%;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.ant-modal-footer {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+}
+
+.copyLink,
+.done {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    color: blue;
+    font-size: 17px;
+}
+.done {
+    color: white;
+    border: none;
+}

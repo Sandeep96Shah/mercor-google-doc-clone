@@ -1,7 +1,9 @@
 import Header from "./header";
 import TextEditor from './Editor';
 import GoogleOptions from "./GoogleOptions";
+import Share from './Share/index';
 import { Container } from './styles';
+import 'react-notifications/lib/notifications.css';
 
 const App = () => {
   return (
@@ -11,6 +13,8 @@ const App = () => {
         <TextEditor />
         <GoogleOptions />
       </div>
+
+      <Share />
       
     </Container>
   )

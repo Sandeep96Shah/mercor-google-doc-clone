@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TITLE } from '../../action/types';
+import { TITLE, SHOW_MODAL } from '../../action/types';
 import { useSelector, useDispatch } from 'react-redux';
 import { Tooltip } from 'antd';
 import { FcDocument } from 'react-icons/fc';
@@ -10,11 +10,13 @@ import { IoIosArrowDown } from 'react-icons/io';
 import { HiOutlineLockOpen } from 'react-icons/hi';
 import { updateTitle } from '../../action/index';
 import { options } from '../../constant/options';
+import { handleShowModal } from '../../action/index';
 import { Container, TitleOptionsContainer, ProfileContainer } from './styles';
 
 const Header = () => {
     
-    const title = useSelector((state) => state.title);
+    const data = useSelector((state) => state);
+    const { title, showModal } = data || {};
     const [ val, setVal ] = useState(title)
     const dispatch = useDispatch();
 
@@ -25,6 +27,10 @@ const Header = () => {
 
     const handleTitleUpdate = () => {
         dispatch(updateTitle({data: val, type: TITLE}));
+    }
+
+    const handleModal = () => {
+        dispatch(handleShowModal({type: SHOW_MODAL, data: !showModal}))
     }
     return (
         <Container>
@@ -84,7 +90,7 @@ const Header = () => {
                         <IoIosArrowDown className='arrow' />
                     </Tooltip>
                 </div>
-                <div className='share tabletHide'>
+                <div className='share tabletHide' onClick={handleModal}>
                     <p className='lock'>
                         <Tooltip 
                             placement="bottom" 
@@ -95,7 +101,7 @@ const Header = () => {
                     </p>
                     <p>Share</p>
                 </div>
-                <div className='share tabletShow'>
+                <div className='share tabletShow' onClick={handleModal}>
                     <p className='lock'>
                         <Tooltip 
                             placement="bottom" 
