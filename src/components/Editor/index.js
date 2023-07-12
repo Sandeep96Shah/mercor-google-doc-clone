@@ -12,8 +12,6 @@ const TextEditor = () => {
         <Container>
             <Editor
                 editorState={editorState}
-                toolbarClassName="toolbarClassName"
-                wrapperClassName="wrapperClassName"
                 editorClassName="editorClassName"
                 onEditorStateChange={handleEdit}
             />;
